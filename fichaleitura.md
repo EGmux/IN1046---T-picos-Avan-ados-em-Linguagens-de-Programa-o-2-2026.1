@@ -1,4 +1,4 @@
-# Ficha de Leitura 
+# Ficha de Leitura
 ## IN1046 - Tópicos Avançados em Linguagens de Programação 2 - Linhas de Produtos de Software
 
 **Aluno(a):**  Enzo Gurgel Bissoli(egb2)
@@ -22,7 +22,7 @@ Sempre que possível, mencione elementos concretos do texto, como conceitos, exe
 
 O tema principal é a implementação de técnicas de controle de variabilidade no código fonte em linhas de produto de software.
 
-A ideia central é que não existe uma técnica única e universalmente adequada para implementar variabilidade — cada abordagem tem trade-offs específicos (escopo, binding time, overhead, traceability, etc.), e a escolha depende fortemente do contexto. O texto se organiza como um framework de análise para ajudar na tomada de decisão, destacando ainda o problema do "what & when": quando introduzir variabilidade e qual técnica escolher.
+A ideia central é que não existe uma técnica única e universalmente adequada para implementar variabilidade — cada abordagem tem _trade-offs_ específicos (escopo, _binding time_, _overhead_, _traceability_, etc.), e a escolha depende fortemente do contexto. O texto se organiza como um framework de análise para ajudar na tomada de decisão, destacando ainda o problema do "_what & when_": quando introduzir variabilidade e qual técnica escolher.
 
 ---
 
@@ -33,15 +33,15 @@ _Indique o problema abordado, a proposta principal e os principais resultados, a
 
 O texto aborda o problema de como implementar variabilidade no código fonte de linhas de produto. Para isso, os autores:
 
-    1. Levantam trabalhos anteriores (Svahnberg, Czarnecki, Weiseneker, etc.) que fornecem taxonomias e conceitos como Generative Programming e AOP.
+Levantam trabalhos anteriores (_Svahnberg, Czarnecki, Weiseneker_, etc.) que fornecem taxonomias e conceitos como _Generative Programming_ e AOP.
 
-    2. Propõem um framework de análise com critérios como escopo, binding time, overhead, separação de concerns, traceability, entre outros.
+Propõem um framework de análise com critérios como escopo, _binding time_, _overhead_, separação de responsabilidades, _traceability_, entre outros.
 
-    3. Analisam as principais técnicas (compilação condicional, herança, mixins, parametrização, carregamento dinâmico, AOP, etc.) sob esses critérios.
+Analisam as principais técnicas (compilação condicional, herança, mixins, parametrização, carregamento dinâmico, AOP, etc.) sob esses critérios.
 
-    4. Relatam experiências práticas com retrofit de variabilidade em projetos existentes.
+Relatam experiências práticas com retrofit de variabilidade em projetos existentes.
 
-A conclusão é que não há bala de prata — a escolha da técnica depende do contexto, e um dos maiores desafios é decidir quando introduzir variabilidade (o problema "what & when").
+A conclusão é que não há bala de prata — a escolha da técnica depende do contexto, e um dos maiores desafios é decidir quando introduzir variabilidade (o problema "_what & when_").
 ---
 
 ## 3. Contribuições e destaques
@@ -52,7 +52,7 @@ _Framework_ de decisão com critérios claros (_binding time_, eficiência, _tra
 
 Eixos de modelagem da variabilidade: separar opcionalidade da feature (se a feature pode estar ausente) do tipo de variabilidade (alternativa, refinamento, etc.) — isso dá um vocabulário mais preciso para descrever o problema antes de escolher a técnica.
 
-Relato de experiência prática com retrofit de variabilidade, reconhecendo explicitamente que migrar sistemas existentes é muito mais difícil do que começar um projeto _greenfield_
+Relato de experiência prática com _retrofit_ de variabilidade, reconhecendo explicitamente que migrar sistemas existentes é muito mais difícil do que começar um projeto _greenfield_
 ---
 
 ## 4. Limitações, fragilidades ou pontos discutíveis
@@ -60,7 +60,7 @@ Relato de experiência prática com retrofit de variabilidade, reconhecendo expl
 **Quais são as principais limitações, fraquezas ou aspectos que merecem crítica?**
 
 - O exemplo prático é apenas de uma linguagem de programação, _Delphi_ de forma que é difícil extrair sinal de ruído, pode ser que com mais exemplos práticos, certas práticas ficassem "óbvias" como boas práticas e outras como "code smells" e portanto reduzir o trabalho de um futuro pesquisado.
-- É mencionado _Design Patterns_, mas o único demonstrado é o *builder pattern*, pode-se argumentar que a herança baseada em "mixin" é um _design pattern_, mas está na seção incorreta.
+- É mencionado _Design Patterns_, mas o único demonstrado é o _builder pattern_, pode-se argumentar que a herança baseada em _mixin_ é um _design pattern_, mas está na seção incorreta.
 -
 ---
 
@@ -68,11 +68,11 @@ Relato de experiência prática com retrofit de variabilidade, reconhecendo expl
 
 **Que partes do texto ficaram confusas, pouco explicadas ou difíceis de entender?**
 
-O texto é bem escrito, mas senti falta de mais exemplos, principalmente de conceitos como Generic assets e Specific assets, que aparecem na fundamentação mas não são ilustrados concretamente no contexto das técnicas analisadas.
+O texto é bem escrito, mas senti falta de mais exemplos, principalmente de conceitos como _Generic assets_ e _Specific assets_, que aparecem na fundamentação mas não são ilustrados concretamente no contexto das técnicas analisadas.
 
-A não inserção do trabalho de Mira Mezini na seção de framework me pareceu uma oportunidade perdida, considerando sua contribuição para composição de aspectos e modularização.
+A não inserção do trabalho de _Mira Mezini_ na seção de _framework_ me pareceu uma oportunidade perdida, considerando sua contribuição para composição de aspectos e modularização.
 
-Não tentar sumarizar a taxonomia de Mikael Svahnberg me pareceu outra oportunidade perdida — uma tabela consolidada ajudaria a visualizar as relações entre as técnicas.
+Não tentar sumarizar a taxonomia de _Mikael Svahnberg_ me pareceu outra oportunidade perdida — uma tabela consolidada ajudaria a visualizar as relações entre as técnicas.
 
 ---
 
@@ -80,9 +80,9 @@ Não tentar sumarizar a taxonomia de Mikael Svahnberg me pareceu outra oportunid
 
 **Como este texto se conecta com os temas da disciplina?**  
 
-O texto se conecta diretamente com os temas da disciplina ao apresentar uma abordagem sistemática para refletir sobre os trade-offs das técnicas existentes para lidar com variabilidade.
+O texto se conecta diretamente com os temas da disciplina ao apresentar uma abordagem sistemática para refletir sobre os _trade-offs_ das técnicas existentes para lidar com variabilidade.
 
-Ao ler o texto, os alunos podem utilizar o framework e os critérios de avaliação propostos para analisar ou até mesmo criar novas técnicas através das "primitivas" apresentadas. A ênfase no problema "what & when" também alinha com a discussão em sala sobre o momento de introduzir variabilidade em um projeto.
+Ao ler o texto, os alunos podem utilizar o _framework_ e os critérios de avaliação propostos para analisar ou até mesmo criar novas técnicas através das "primitivas" apresentadas. A ênfase no problema "_what & when_" também alinha com a discussão em sala sobre o momento de introduzir variabilidade em um projeto.
 
 ---
 
@@ -90,11 +90,11 @@ Ao ler o texto, os alunos podem utilizar o framework e os critérios de avaliaç
 
 **Liste pelo menos 2 perguntas para discussão em sala.**
 
-Os autores não entram muito em metaprogramação fora do escopo de orientação a objetos. O que existe fora desse paradigma para lidar com variabilidade? Linguagens funcionais ou baseadas em protótipos (como Smalltalk) teriam abordagens diferentes?
+Os autores não entram muito em metaprogramação fora do escopo de orientação a objetos. O que existe fora desse paradigma para lidar com variabilidade? Linguagens funcionais ou baseadas em protótipos (como _Smalltalk_) teriam abordagens diferentes?
 
-A ideia de Generative Programming é atrativa — fornecer componentes parametrizados que passam por um processo intermediário e geram produtos através do configuration knowledge. Mas o que seria esse configuration knowledge na prática? Como ele se diferencia de um simples arquivo de configuração?
+A ideia de _Generative Programming_ é atrativa — fornecer componentes parametrizados que passam por um processo intermediário e geram produtos através do configuration knowledge. Mas o que seria esse configuration knowledge na prática? Como ele se diferencia de um simples arquivo de configuração?
 
-O que significa compor software através de "independent design decisions/intentions"? Qual seria a definição matemática de design decision e como isso seria mapeado em uma função composicional? Ou é apenas uma metáfora organizacional?
+O que significa compor software através de "_independent design decisions/intentions_"? Qual seria a definição matemática de design decision e como isso seria mapeado em uma função composicional? Ou é apenas uma metáfora organizacional?
 
 ---
 
@@ -102,8 +102,8 @@ O que significa compor software através de "independent design decisions/intent
 
 O texto é ótimo como revisão dos conceitos vistos em sala — pontos de variabilidade, binding time, tipos de variabilidade — e serve como material complementar para implementação de variabilidade em novas linhas de produto de software.
 
-Sua principal força é a honestidade: não finge que existe uma resposta fácil, oferece um framework de análise, reconhece que a migração é dolorosa e admite que o problema do "what & when" é central. A estrutura de avaliação (escopo, binding time, overhead, separação de concerns, traceability, etc.) é um bom roteiro tanto para quem está aprendendo quanto para quem precisa tomar decisões reais em projetos.
+Sua principal força é a honestidade: não finge que existe uma resposta fácil, oferece um _framework_ de análise, reconhece que a migração é dolorosa e admite que o problema do "_what & when_" é central. A estrutura de avaliação (escopo, _binding time_, _overhead_, separação de responsabilidades, _traceability_ etc.) é um bom roteiro tanto para quem está aprendendo quanto para quem precisa tomar decisões reais em projetos.
 
-A fraqueza maior é a falta de aprofundamento prático fora do exemplo em Delphi, e a pouca exploração de como as técnicas se comportam quando combinadas. Como leitura da disciplina, vale muito porque traz uma visão de engenharia realista, contrastando com textos que tratam linhas de produto como um problema puramente de design com solução conhecida.
+A fraqueza maior é a falta de aprofundamento prático fora do exemplo em _Delphi_, e a pouca exploração de como as técnicas se comportam quando combinadas. Como leitura da disciplina, vale muito porque traz uma visão de engenharia realista, contrastando com textos que tratam linhas de produto como um problema puramente de design com solução conhecida.
 
 **Qual é sua avaliação geral do texto como leitura da disciplina?**  
