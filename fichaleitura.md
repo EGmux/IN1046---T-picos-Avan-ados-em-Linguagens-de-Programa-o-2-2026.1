@@ -53,9 +53,10 @@ Reconhecimento da relação com princípios clássicos de engenharia de software
 
 **Quais são as principais limitações, fraquezas ou aspectos que merecem crítica?**
 
-Definição vaga de teste de regressão — o texto menciona testes de regressão para feature models (QA3, I9, I10), mas não define claramente o que isso significa: se são testes sobre o modelo em si (validade de configurações), sobre o mapeamento feature-to-asset, ou sobre os produtos derivados. Essa ambiguidade dificulta a operacionalização da prática.
+Definição vaga de teste de regressão. O texto menciona testes de regressão para feature models (QA3, I9, I10), mas não define claramente o que isso significa: se são testes sobre o modelo em si (validade de configurações), sobre o mapeamento feature-to-asset, ou sobre os produtos derivados. Essa ambiguidade dificulta a operacionalização da prática.
 
-Assimetria na extração dos princípios — há uma variação significativa no número de princípios atribuídos a cada especialista (alguns com 10, outros com 1-2), sem ponderação ou normalização. Isso pode enviesar os resultados em favor de participantes mais prolíficos, sem necessariamente refletir maior relevância ou consenso na área.
+Assimetria na extração dos princípios. há uma variação significativa no número de princípios atribuídos a cada especialista (alguns com 10, outros com 1-2), sem ponderação ou normalização. Isso pode enviesar os resultados em favor de participantes mais prolíficos, sem necessariamente refletir maior relevância ou consenso na área.
+
 ---
 
 ## 5. Pontos pouco claros
@@ -80,9 +81,9 @@ Durante as aulas, o conceito de feature modeling foi introduzido com ênfase no 
 
 **Liste pelo menos 2 perguntas para discussão em sala.**
 
-1 -O que seria um teste de regressão para um feature model? O artigo menciona testes de regressão (QA3, I9, I10) como uma prática para garantir que mudanças no modelo não quebrem configurações existentes, mas não define claramente o que isso significa. Esses testes deveriam validar apenas a consistência do modelo (ex: configurações antes válidas continuam válidas), ou também os produtos derivados (ex: o mesmo código é gerado)? Como seria possível automatizar esse tipo de teste?
+1. O que seria um teste de regressão para um feature model? O artigo menciona testes de regressão (QA3, I9, I10) como uma prática para garantir que mudanças no modelo não quebrem configurações existentes, mas não define claramente o que isso significa. Esses testes deveriam validar apenas a consistência do modelo (ex: configurações antes válidas continuam válidas), ou também os produtos derivados (ex: o mesmo código é gerado)? Como seria possível automatizar esse tipo de teste?
 
-2 - Por que não usar infrastructure as code (IaC) como alternativa à separação entre documentação e implementação? O artigo enfatiza a necessidade de reduzir o drift entre a documentação do feature model e sua implementação. No entanto, ferramentas de IaC (Terraform, Ansible, Pulumi) já tratam configuração como código executável, com rastreabilidade, versionamento e testes. Nesse contexto, qual seria a vantagem de manter um feature model como artefato separado, em vez de tratar o próprio código (ou a infraestrutura declarativa) como a representação única da variabilidade?
+2. Por que não usar infrastructure as code (IaC) como alternativa à separação entre documentação e implementação? O artigo enfatiza a necessidade de reduzir o drift entre a documentação do feature model e sua implementação. No entanto, ferramentas de IaC (Terraform, Ansible, Pulumi) já tratam configuração como código executável, com rastreabilidade, versionamento e testes. Nesse contexto, qual seria a vantagem de manter um feature model como artefato separado, em vez de tratar o próprio código (ou a infraestrutura declarativa) como a representação única da variabilidade?
 ---
 
 ## 8. Avaliação geral
