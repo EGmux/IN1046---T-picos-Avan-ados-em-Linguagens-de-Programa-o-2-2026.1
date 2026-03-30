@@ -37,18 +37,15 @@ Os autores, através do método de snowballing, encontraram 10 experts em featur
 Um ponto muito importante é a variância no número total de features que cada expert precisou considerar durante o desenvolvimento do feature model, de 40 até mais do que 1000.
 Essa variância indica que muito provavelmente certos princípios são localizados enquanto outros são universais (e isso é comprovado no artigo)
 
-
-
-
 ---
 
 ## 3. Contribuições e destaques
 
 **Quais são as principais contribuições, pontos fortes ou aspectos mais interessantes do texto?**
 
--  
--  
--  
+- Identificação e mapeamento de 34 princípios em 8 categorias, isso reduz risco de projeto  
+- Apresentação de uma metodologia que segundo os mesmos é reproduzível, logo pode ser replicada em outros contextos  
+- Reconhecimento que muitos dos príncipios são comuns na prática da engenharia de softwar como modularização, dividir para conquistar, camadas de abstração   
 
 ---
 
@@ -56,7 +53,7 @@ Essa variância indica que muito provavelmente certos princípios são localizad
 
 **Quais são as principais limitações, fraquezas ou aspectos que merecem crítica?**
 
--  
+- Como eles realizaram a entrevista com os experts de forma a evitar o viés? Não ficou claro no texto
 -  
 -  
 
