@@ -53,7 +53,7 @@ Essa variância indica que muito provavelmente certos princípios são localizad
 
 **Quais são as principais limitações, fraquezas ou aspectos que merecem crítica?**
 
-- Como eles realizaram a entrevista com os experts de forma a evitar o viés? Não ficou claro no texto
+- 
 -  
 -  
 
@@ -63,6 +63,9 @@ Essa variância indica que muito provavelmente certos princípios são localizad
 
 **Que partes do texto ficaram confusas, pouco explicadas ou difíceis de entender?**
 
+No príncipio de modelagem "Use workshops to extract domain knowldege" seria interessante uma referência ou explanação de como exatamente se dá esses workshops.
+
+No princípio de modelagem "If needed, introduce spuriuous features" o exemplo não ficou muito claro e o que difere esse príncipo de imediamente abaixo "define default feature values" aparentemente são soluções para o mesmo problema.
 
 ---
 
@@ -70,6 +73,7 @@ Essa variância indica que muito provavelmente certos princípios são localizad
 
 **Como este texto se conecta com os temas da disciplina?**  
 
+Durante as aulas o conceito de feature modeling foi introduzido, com um foco no embasamento teórico antes de uma abordagem prática, o texto permite que o aluno participe do desenvolvimento de um feature model durante todo o ciclo de vida do mesmo (assumindo os pré-requisitos mencionados no artigo) 
 
 ---
 
@@ -77,8 +81,8 @@ Essa variância indica que muito provavelmente certos princípios são localizad
 
 **Liste pelo menos 2 perguntas para discussão em sala.**
 
-1.  
-2.  
+1.  O que seria um teste de regressão para um feature model?
+2.  Existe uma ênfase muito grande em diminuir o "drift" de configuração entre documentação e implementação, porque não usar abordagems de IaC (infrastructure as code?)
 ...
 
 ---
