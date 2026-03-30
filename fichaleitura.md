@@ -20,8 +20,7 @@ Sempre que possível, mencione elementos concretos do texto, como conceitos, exe
 
 **Qual é o tema principal do texto e qual é sua ideia central?**  
 
-Encontrar príncipios que facilitem a criação, manutenção e evolução de feature models.
-Os autores encontraram 34 princípios divididos em 8 categorias através de pesquisas com experts na área.
+O tema principal do texto é a identificação de princípios práticos para o ciclo de vida de feature models — desde a criação até a manutenção e evolução. A ideia central é que esses princípios, extraídos de entrevistas com especialistas da indústria, podem reduzir esforço repetitivo e tornar o desenvolvimento de feature models mais sistemático. Os autores identificaram 34 princípios, organizados em 8 categorias, a partir de entrevistas com 10 especialistas com experiência prática na área.
 
 ---
 
@@ -30,12 +29,11 @@ Os autores encontraram 34 princípios divididos em 8 categorias através de pesq
 **Resuma o texto brevemente.**  
 _Indique o problema abordado, a proposta principal e os principais resultados, argumentos ou conclusões._
 
-O problema é que o ciclo de vida de uma feature model é algo não formalizado e portanto há muito esforço repetitivo que pode ser mitigado através da adoção de príncipios.
+O problema abordado é a falta de formalização do ciclo de vida de feature models, o que resulta em esforço repetitivo e soluções ad hoc. A proposta dos autores é identificar princípios que possam guiar a criação, manutenção e evolução desses modelos de forma sistemática.
 
-Os autores, através do método de snowballing, encontraram 10 experts em feature models e extraíram através de entrevistas 34 príncipios para o ciclo de vida de um feature model.
+A metodologia consistiu em entrevistas com 10 especialistas da indústria, selecionados por meio de snowballing, a partir das quais foram extraídos 34 princípios organizados em 8 categorias.
 
-Um ponto muito importante é a variância no número total de features que cada expert precisou considerar durante o desenvolvimento do feature model, de 40 até mais do que 1000.
-Essa variância indica que muito provavelmente certos princípios são localizados enquanto outros são universais (e isso é comprovado no artigo)
+Um ponto relevante é a variância no número de features que cada especialista precisou gerenciar — de 40 a mais de 1000. Essa diferença sugere que certos princípios são aplicáveis a contextos específicos (localizados), enquanto outros são universais, o que os autores demonstram ao longo do artigo.
 
 ---
 
@@ -53,8 +51,8 @@ Essa variância indica que muito provavelmente certos princípios são localizad
 
 **Quais são as principais limitações, fraquezas ou aspectos que merecem crítica?**
 
-- 
--  
+- Não define o que vem a ser um teste de regressão de um feature model
+- A uma assimetria entre a quantidade de príncipios extraída de cada expert, alguns com 10 e outros com 1-2
 -  
 
 ---
@@ -88,5 +86,7 @@ Durante as aulas o conceito de feature modeling foi introduzido, com um foco no 
 ---
 
 ## 8. Avaliação geral
+
+O texto proporciona subsídio teórico e prático de como implementar o ciclo de vida de um feature model, a ênfase em uma metodologia reproduzível permite que as técnicas de extração de conhecimento sejam replicadas em outros contextos. 
 
 **Qual é sua avaliação geral do texto como leitura da disciplina?** 
