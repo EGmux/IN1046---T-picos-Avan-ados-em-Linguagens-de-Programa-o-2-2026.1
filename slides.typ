@@ -337,5 +337,34 @@
 #slide()[
   == Threats to validity
 
-  -> Interviews start with a 
+  -> Interviews could have been biased, here the authors mention the sources of bias
+
+  -> Construct Validity
+
+  (+) intro to the interviewee project, terminology adaptation
+
+  -> Internal validity
+
+  (+) Ensure domain independence principles (broad interviewee experience)
+
+  -> External validity
+  
+  (+) Some principles are context sensitive
+
+  -> Conclusion validity
+
+  (+) Principles are general and applicable to a broader scope
+  
+  (+) Study focus on reproducible methods (so maybe Methodology is reproducible)
 ]
+
+#slide()[
+  == Conclusion 
+
+  -> 34 atemporal principles
+
+  -> 8 feature modeling categories
+
+  -> Interview with experts in the domain
+]
+

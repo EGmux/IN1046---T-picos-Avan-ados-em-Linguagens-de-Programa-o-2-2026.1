@@ -1,11 +1,11 @@
-# Ficha de Leitura
+# Ficha de Leitura 
 ## IN1046 - Tópicos Avançados em Linguagens de Programação 2 - Linhas de Produtos de Software
 
-**Aluno(a):**  Enzo Gurgel Bissoli(egb2)
-**Data:**  23/03/2026
-**Título do texto:** Implementing Product Line Variabilities
-**Autor(es):**  Michalis Anastasopoulos, Cristina Gacek
-**Ano:**  2001
+**Aluno(a):** Enzo Gurgel Bissoli 
+**Data:**  Mar 30 2026
+**Título do texto:**  Principles of Feature Modeling
+**Autor(es):**  Damir Nesic, Jacob Kruger, Stefan Stanciulescu, Thorsten Berger
+**Ano:** 2019  
 
 --- 
 
@@ -20,9 +20,8 @@ Sempre que possível, mencione elementos concretos do texto, como conceitos, exe
 
 **Qual é o tema principal do texto e qual é sua ideia central?**  
 
-O tema principal é a implementação de técnicas de controle de variabilidade no código fonte em linhas de produto de software.
-
-A ideia central é que não existe uma técnica única e universalmente adequada para implementar variabilidade — cada abordagem tem _trade-offs_ específicos (escopo, _binding time_, _overhead_, _traceability_, etc.), e a escolha depende fortemente do contexto. O texto se organiza como um framework de análise para ajudar na tomada de decisão, destacando ainda o problema do "_what & when_": quando introduzir variabilidade e qual técnica escolher.
+Encontrar príncipios que facilitem a criação, manutenção e evolução de feature models.
+Os autores encontraram 34 princípios divididos em 8 categorias através de pesquisas com experts na área.
 
 ---
 
@@ -31,48 +30,42 @@ A ideia central é que não existe uma técnica única e universalmente adequada
 **Resuma o texto brevemente.**  
 _Indique o problema abordado, a proposta principal e os principais resultados, argumentos ou conclusões._
 
-O texto aborda o problema de como implementar variabilidade no código fonte de linhas de produto. Para isso, os autores:
+O problema é que o ciclo de vida de uma feature model é algo não formalizado e portanto há muito esforço repetitivo que pode ser mitigado através da adoção de príncipios.
 
-Levantam trabalhos anteriores (_Svahnberg, Czarnecki, Weiseneker_, etc.) que fornecem taxonomias e conceitos como _Generative Programming_ e AOP.
+Os autores, através do método de snowballing, encontraram 10 experts em feature models e extraíram através de entrevistas 34 príncipios para o ciclo de vida de um feature model.
 
-Propõem um framework de análise com critérios como escopo, _binding time_, _overhead_, separação de responsabilidades, _traceability_, entre outros.
+Um ponto muito importante é a variância no número total de features que cada expert precisou considerar durante o desenvolvimento do feature model, de 40 até mais do que 1000.
+Essa variância indica que muito provavelmente certos princípios são localizados enquanto outros são universais (e isso é comprovado no artigo)
 
-Analisam as principais técnicas (compilação condicional, herança, mixins, parametrização, carregamento dinâmico, AOP, etc.) sob esses critérios.
 
-Relatam experiências práticas com retrofit de variabilidade em projetos existentes.
 
-A conclusão é que não há bala de prata — a escolha da técnica depende do contexto, e um dos maiores desafios é decidir quando introduzir variabilidade (o problema "_what & when_").
+
 ---
 
 ## 3. Contribuições e destaques
 
 **Quais são as principais contribuições, pontos fortes ou aspectos mais interessantes do texto?**
 
-_Framework_ de decisão com critérios claros (_binding time_, eficiência, _traceability_, etc.) — algo que falta em muitos textos da área, que tendem a prescrever técnicas sem compará-las sistematicamente.
+-  
+-  
+-  
 
-Eixos de modelagem da variabilidade: separar opcionalidade da feature (se a feature pode estar ausente) do tipo de variabilidade (alternativa, refinamento, etc.) — isso dá um vocabulário mais preciso para descrever o problema antes de escolher a técnica.
-
-Relato de experiência prática com _retrofit_ de variabilidade, reconhecendo explicitamente que migrar sistemas existentes é muito mais difícil do que começar um projeto _greenfield_
 ---
 
 ## 4. Limitações, fragilidades ou pontos discutíveis
 
 **Quais são as principais limitações, fraquezas ou aspectos que merecem crítica?**
 
-- O exemplo prático é apenas de uma linguagem de programação, _Delphi_ de forma que é difícil extrair sinal de ruído, pode ser que com mais exemplos práticos, certas práticas ficassem "óbvias" como boas práticas e outras como "code smells" e portanto reduzir o trabalho de um futuro pesquisado.
-- É mencionado _Design Patterns_, mas o único demonstrado é o _builder pattern_, pode-se argumentar que a herança baseada em _mixin_ é um _design pattern_, mas está na seção incorreta.
--
+-  
+-  
+-  
+
 ---
 
 ## 5. Pontos pouco claros
 
 **Que partes do texto ficaram confusas, pouco explicadas ou difíceis de entender?**
 
-O texto é bem escrito, mas senti falta de mais exemplos, principalmente de conceitos como _Generic assets_ e _Specific assets_, que aparecem na fundamentação mas não são ilustrados concretamente no contexto das técnicas analisadas.
-
-A não inserção do trabalho de _Mira Mezini_ na seção de _framework_ me pareceu uma oportunidade perdida, considerando sua contribuição para composição de aspectos e modularização.
-
-Não tentar sumarizar a taxonomia de _Mikael Svahnberg_ me pareceu outra oportunidade perdida — uma tabela consolidada ajudaria a visualizar as relações entre as técnicas.
 
 ---
 
@@ -80,9 +73,6 @@ Não tentar sumarizar a taxonomia de _Mikael Svahnberg_ me pareceu outra oportun
 
 **Como este texto se conecta com os temas da disciplina?**  
 
-O texto se conecta diretamente com os temas da disciplina ao apresentar uma abordagem sistemática para refletir sobre os _trade-offs_ das técnicas existentes para lidar com variabilidade.
-
-Ao ler o texto, os alunos podem utilizar o _framework_ e os critérios de avaliação propostos para analisar ou até mesmo criar novas técnicas através das "primitivas" apresentadas. A ênfase no problema "_what & when_" também alinha com a discussão em sala sobre o momento de introduzir variabilidade em um projeto.
 
 ---
 
@@ -90,20 +80,12 @@ Ao ler o texto, os alunos podem utilizar o _framework_ e os critérios de avalia
 
 **Liste pelo menos 2 perguntas para discussão em sala.**
 
-Os autores não entram muito em metaprogramação fora do escopo de orientação a objetos. O que existe fora desse paradigma para lidar com variabilidade? Linguagens funcionais ou baseadas em protótipos (como _Smalltalk_) teriam abordagens diferentes?
-
-A ideia de _Generative Programming_ é atrativa — fornecer componentes parametrizados que passam por um processo intermediário e geram produtos através do configuration knowledge. Mas o que seria esse configuration knowledge na prática? Como ele se diferencia de um simples arquivo de configuração?
-
-O que significa compor software através de "_independent design decisions/intentions_"? Qual seria a definição matemática de design decision e como isso seria mapeado em uma função composicional? Ou é apenas uma metáfora organizacional?
+1.  
+2.  
+...
 
 ---
 
 ## 8. Avaliação geral
 
-O texto é ótimo como revisão dos conceitos vistos em sala — pontos de variabilidade, binding time, tipos de variabilidade — e serve como material complementar para implementação de variabilidade em novas linhas de produto de software.
-
-Sua principal força é a honestidade: não finge que existe uma resposta fácil, oferece um _framework_ de análise, reconhece que a migração é dolorosa e admite que o problema do "_what & when_" é central. A estrutura de avaliação (escopo, _binding time_, _overhead_, separação de responsabilidades, _traceability_ etc.) é um bom roteiro tanto para quem está aprendendo quanto para quem precisa tomar decisões reais em projetos.
-
-A fraqueza maior é a falta de aprofundamento prático fora do exemplo em _Delphi_, e a pouca exploração de como as técnicas se comportam quando combinadas. Como leitura da disciplina, vale muito porque traz uma visão de engenharia realista, contrastando com textos que tratam linhas de produto como um problema puramente de design com solução conhecida.
-
-**Qual é sua avaliação geral do texto como leitura da disciplina?**  
+**Qual é sua avaliação geral do texto como leitura da disciplina?** 
