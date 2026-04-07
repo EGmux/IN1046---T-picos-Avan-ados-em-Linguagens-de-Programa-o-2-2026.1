@@ -39,11 +39,6 @@
     ] 
 
     #text(12pt, fill: blue,weight: "bold")[
-      b) O modelo apresentado define o conceito de um aplicativo móvel (root node) e cada feature no espaço do problema é mapeada em nós intermediários (Login, Notifications, Payment e Analytics) por fim o modelo apresenta um mapeamento para espaço de solução através de features que estão agrupadas nos nós intermediários.
-      Na análise do diagrama temos que login é uma feature mutuamente exclusiva, notifications é um caso de features opcionais, payment é um caso de features mutuamente exclusivas mas ao menos uma deve estar presente.
-      Suponha a configuração [M, (L,N), (G)] é uma configuração válida pois o equivalente do primeiro cross-tree constraint é ~G -> ~P e isso é verdadeiro, Payment nunca foi selecionado então continua com semântica válida, Analytics continua com semântica válida.
-      a outra equivalente é ~CreditCard -> ~Analytics e é verdadeiro e por fim ~InApp -> ~PayPal que é verdadeiro.
-      Agora suponha a seguinte configuração [M, (L,P), (G,IA,PPL)], temos que a configuração é inválida visto que falta selecionar a feature de notifications. 
     ]
 	e
     #v(1fr)
