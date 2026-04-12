@@ -86,3 +86,57 @@
   )
 ]
 
+#slide()[
+  == Transformação de Modelo de Features
+  #grid(
+  columns: (1fr, 1fr),
+  column-gutter: 0.5em,
+    align(center)[
+    #image("assets/featureModellingQ3.png", height: 10cm, width: 13cm)
+    ],
+    align(left)[
+    #text(10pt, fill: blue,weight: "semibold")[
+      a)
+      $({"Graph", "Edges", "Directed"},{"Unidirected", "Algorithms", "DFS", "CycleDetector"})$ OK 
+      $({"Graph", "Edges", "Unidirected"},{"Directed", "Algorithms", "DFS", "CycleDetector"})$ OK
+      $({"Graph", "Edges", "Directed", "Algorithms", "DFS"},{"Unidirected", "CycleDetector"})$ OK
+      $({"Graph", "Edges", "Directed", "Algorithms", "CycleDetector"},{"Unidirected", "DFS"})$ OK
+      $({"Graph", "Edges", "Directed", "Algorithms", "DFS", "CycleDetector"},{"Unidirected"})$ OK
+      $({"Graph", "Edges", "Unidirected", "Algorithms", "DFS"},{"Directed", "CycleDetector"})$ OK
+      $({"Graph", "Edges", "Unidirected", "Algorithms", "CycleDetector"},{"Directed", "DFS"})$ 
+      $({"Graph", "Edges", "Unidirected", "Algorithms", "CycleDetector", "DFS"},{"Directed"})$ 
+
+      b) é o problema do \#SAT tal que cada expressão indica uma possível derivação, a dificuldade envolvida, a complexidade,  explode quando há features opcionais.
+
+      c) fórmula proposicional 
+
+      $"Graph" <=> "Edges" $ 
+
+      $("Directed" or "Unidirected") <=> "Edges"$
+
+      $"Algorithms" => "Graph"$
+
+      $("DFS" or "CycleDetector") <=> "Algorithms"$
+
+      $"CycleDetector" => "Directed"$
+
+
+      $(~G or E) and (~E or G)$
+
+      $(D or U) <=> E :=> (D or U) => E and E => (D or U) :=> (¬D ∨ E) ∧ (¬U ∨ E) ∧ (D ∨ U ∨ ¬E) $
+
+      $~A or G$
+
+      $(¬D ∨ A) ∧ (¬C ∨ A) ∧ (¬A ∨ D ∨ C)$
+
+      $~C or D$
+
+      conjunto de todas as features é a)
+
+      A maior vantagem da notação proposicional é fácil entendimento por stakeholders, mas a desvantagem é que não pode ser computada por um solvers, pois trabalham com as operações and, or e literais apenas.
+      A maior vantagem da notação FNC é que solvers podem operar, mas quase impossível a leitura por humanos
+      A maior vantagem do conjunto de features é para funções de alta ordem, quantos produtos válidos, proporção de produtos válidos para número de features entre outras "queries"
+    ]
+    ]
+  )
+]
