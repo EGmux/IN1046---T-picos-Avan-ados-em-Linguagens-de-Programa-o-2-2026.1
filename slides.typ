@@ -49,3 +49,40 @@
   )
   ]
 
+#slide()[
+  == Análise de Modelo de Features
+  #grid(
+  columns: (1fr, 1fr),
+  column-gutter: 0.5em,
+    align(center)[
+    #v(0.25fr)
+      #image("assets/featureModelingQ2.png", height: 12cm, width: 11cm)
+    #v(1fr)
+    ],
+    align(left)[
+      #text(10pt, fill: blue,weight: "semibold")[
+       a) Temos que 
+
+       $("FLAC" or "~Internal Memory") -> ~"Wifi"$,
+
+       $~"InternalMemory" -> ~"Bluethooth"$ 
+
+       $"SDCard" -> ~"WiFi"$
+
+       sabemos que Playback é uma feature obrigatória toda vez que a feature MusicPlayer é selecionada, além disso é necessário a escolha de exclusivamente uma feature "filha" de Playback, por exemplo MP3.
+       Sendo assim temos:
+
+       $({"MusicPlayer", "Playback", "MP3"}, {"FLAC", "Connectivity", "Bluethooth", "WiFi", "Storage", "SDCard", "InternalMemory"})$
+
+       logo é possível realizar uma derivação válida, o modelo de features não é vazio.
+
+       b) As únicas features, core, são MusicPlayer e Playback, já features mortas temos zero.
+
+       c) $"PlayBack" -> ~"InternalMemory"$ 
+
+       d) Pode ser usado para detectar uma feature morta, assumindo que sempre que tal feature for selecionada nenhum produto válido pode ser produzido
+      ]
+    ]
+  )
+]
+
