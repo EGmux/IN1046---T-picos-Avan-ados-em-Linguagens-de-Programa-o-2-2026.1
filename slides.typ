@@ -1,5 +1,6 @@
 #import "@preview/touying:0.6.1": *
 #import "cintheme.typ": *
+#import "@preview/cetz:0.4.2": canvas, draw, tree
 
 #show: cintheme.with(
   aspect-ratio: "16-9",
@@ -137,6 +138,73 @@
       A maior vantagem da notação FNC é que solvers podem operar, mas quase impossível a leitura por humanos
       A maior vantagem do conjunto de features é para funções de alta ordem, quantos produtos válidos, proporção de produtos válidos para número de features entre outras "queries"
     ]
+    ]
+  )
+]
+
+#slide()[
+  == Derivar Modelos de features a partir de Requisitos
+  #grid(
+  columns: (1fr, 1fr),
+  column-gutter: 0.5em,
+    align(left)[
+    #image("assets/featureModellingQ4.png", height: 10cm, width: 20cm)
+    ],
+    align(right)[
+      #canvas({
+        import draw: *
+        // Feature type symbols
+        let mandatory-sym = "•"
+        let optional-sym = "○"
+        let xor-sym = "⊻"
+        let or-sym = "∨"
+        let core-sym = "✓"
+        let dead-sym = "✗"
+        let abstract-sym = "†"
+
+        // Helper to create prefixed content
+        let mandatory(content) = [ #mandatory-sym #content ]
+        let optional(content) = [ #optional-sym #content ]
+        let xor-parent(content) = [ #xor-sym #content ]
+        let or-parent(content) = [ #or-sym #content ]
+        let core(content) = [ #core-sym #content ]
+        let dead(content) = [ #dead-sym #content ]
+        let abstract(content) = [ #abstract-sym #content ]
+        let draw-feature-node(node) = {
+          // Convert content to string if needed
+          let content-str = if type(node.content) == str { node.content } else { repr(node.content) }
+
+          // Check prefixes
+          if content-str.starts-with("•") {
+            // Mandatory feature
+            rect((-1,-0.5), (2,1), fill: white, stroke: blue)
+            content((0,0), content-str.slice(1))
+            circle((-0.8, 0.3), radius: 0.1, fill: black)
+          }
+          else if content-str.starts-with("○") {
+            // Optional feature
+            rect((-1,-0.5), (2,1), fill: white, stroke: gray)
+            content((0,0), content-str.slice(1))
+            circle((-0.8, 0.3), radius: 0.1, fill: white, stroke: gray)
+          }
+          else if content-str.starts-with("⊻") {
+            // XOR parent
+            rect((-1,-0.5), (2,1), fill: white, stroke: purple)
+            content((0,0), content-str.slice(1))
+            content((0, 0.6), "⊻")
+          }
+          else {
+            // Normal feature
+            rect((-1,-0.5), (2,1), fill: white, stroke: blue)
+            content((0,0), node.content)
+          }
+        }
+        set-style(content: (padding: .5))
+
+        tree.tree(draw-node: draw-feature-node,
+          (optional[HomeDevice], mandatory([A]), optional([B])))
+
+      })
     ]
   )
 ]
